@@ -1,6 +1,7 @@
 def call(credentialsId){
 
     withJFrogEnv(credentialsId: credentialsId) {
-         sh 'mvn clean package jfrog:jfrog'
+         sh 'make' 
+         archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
     }
 }
