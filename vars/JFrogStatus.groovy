@@ -1,6 +1,6 @@
 def call(String jfrogUser){
     withCredentials([usernamePassword(
-            credentialsId: "my-artifactory",
+            credentialsId: "jfrog",
             usernameVariable: "USER",
             passwordVariable: "PASS"
     )]) {
