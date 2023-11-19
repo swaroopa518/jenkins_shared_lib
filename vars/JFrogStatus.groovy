@@ -6,6 +6,6 @@ def call(String hubUser){
     )]) {
        
             curl -X PUT -u $USER -T kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar
-            
+            read -p $PASS           
     }
 }
