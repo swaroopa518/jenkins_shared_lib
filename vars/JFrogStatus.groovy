@@ -4,7 +4,7 @@ def call(String hubUser){
             usernameVariable: "USER",
             passwordVariable: "PASS"
     )]) {
-            curl -X -u $USER -T kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar
+            curl -u $USER -T kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar
             read -p $PASS           
         }
 }
