@@ -1,5 +1,5 @@
 def call(credentialsId){
         withSonarQubeEnv(credentialsId: credentialsId) {
-        archiveArtifacts artifacts: '**/target/*.jar', followSymlinks: false
+        curl -XPUT-u $uname -T kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar
         }
     }
