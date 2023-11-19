@@ -1,4 +1,4 @@
-def call(String hubUser){
+def call(String JfrogUser){
     withCredentials([usernamePassword(
             credentialsId: "my-artifactory",
             usernameVariable: "USER",
