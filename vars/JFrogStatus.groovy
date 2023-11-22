@@ -1,3 +1,6 @@
-def call(){
-    archiveArtifacts artifacts: '**/target/*.jar', followSymlinks: false
+def call(credentialsId){
+
+    withJFrogInstanceEnv(credentialsId: credentialsId) {
+         archiveArtifacts artifacts: '**/target/*.jar', followSymlinks: false
+    }
 }
