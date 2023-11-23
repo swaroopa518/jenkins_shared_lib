@@ -4,7 +4,7 @@ def call(String JfrogUser){
             usernameVariable: "USER",
             passwordVariable: "PASS"
     )]) {
-        sh("curl -u $USER -X PUT -T  **/target/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar http://<EC2IP>:8082/artifactory/example-repo-local/)
+        sh("curl -u $USER -X PUT -T  **/target/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar http://<EC2IP>:8082/artifactory/example-repo-local/")
         read -s $PASS
     }
 }
