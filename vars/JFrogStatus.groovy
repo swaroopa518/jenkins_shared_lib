@@ -4,10 +4,8 @@ def call(String JfrogUser){
             usernameVariable: "USER",
             passwordVariable: "PASS"
     )]) {
-        
-         archiveArtifacts artifacts: '**/target/*.jar', followSymlinks: false
-     
-  
+        sh("curl -u $USER -X PUT -T  **/target/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar http://<EC2IP>:8082/artifactory/example-repo-local/
+           
     }
 }
 
